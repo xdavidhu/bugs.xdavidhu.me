@@ -1,0 +1,148 @@
+header {
+  width: 100%;
+  background: #222;
+}
+
+.h-wrap {
+  @extend %padding-large;
+
+  h1.title {
+    @extend h3;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    a {
+      color: $text-color;
+      text-decoration: none;
+      &:hover {
+        color: $link-color;
+      }
+    }
+  } // end h1.title
+
+} // end .h-wrap
+
+.menu-icon {
+  @extend %padding-large;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 45px;
+  @media (max-width: 942px) {
+      padding-top: 40px;
+  }
+  @media (max-width: 642px) {
+    padding-top: 32px;
+  }
+  a {
+    color: $text-color;
+    text-decoration: none;
+    &:hover {
+      color: $link-color;
+    }
+  }
+  .back {
+    text-align: center;
+    border: 2px solid $border-color;
+    border-radius: 6px;
+    padding: 10px;
+    &:hover {
+      border: 2px solid $link-color;
+    }
+  }
+  .back:after {
+    content: 'back to xdavidhu.me';
+  }
+  @media (max-width: 642px) {
+    .back:after {
+      content: 'xdavidhu.me';
+    }
+  }
+} // end .menu-icon
+
+
+
+// Off-canvas
+
+.site-wrapper {
+  @extend %transition;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  &.open {
+    .menu-icon {
+      position: fixed;
+    }
+  }
+}
+
+.off-canvas {
+  @extend %padding-large;
+  transition: transform .3s ease;;
+  position: fixed;
+  top: 0;
+  right: -25em;
+  width: 25em;
+  height: 100%;
+  background: $smoke-color;
+  z-index: 100;
+  overflow: auto;
+
+  // insuring that off-canvas doesn't take more than the average iPhone portrait width under 400px
+  @media (max-width: 399px) {
+    max-width: 320px;
+  }
+
+  &.toggled {
+    -webkit-transform: translateX(-25em);
+    transform:         translateX(-25em);
+    border-left: 1px solid $border-color;
+  }
+
+  .avatar {
+    display: block;
+    margin-bottom: $spacing-s;
+    img {
+      width: 6em;
+      height: 6em;
+      border-radius: 50%;
+    }
+  } // end .avatar
+
+
+  .bio {
+    display: block;
+    h1 {
+      @extend h3;
+      margin: 0;
+    }
+    p {
+      font-size: 90%;
+      color: lighten($text-color, 30%);
+      margin-bottom: 0;
+    }
+  }
+
+
+  nav {
+
+    h6 {
+      text-align: left;
+      margin-top: $spacing-m;
+      margin-bottom: $spacing-s;
+      color: lighten($text-color, 50%);
+      padding-bottom: $spacing-xs;
+      border-bottom: 1px solid $border-color;
+    }
+    ul li {
+      list-style-type: none;
+      margin-bottom: $spacing-xs;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+} // end .off-canvas

@@ -1,0 +1,23 @@
+// Made with the awesome http://icomoon.io/ !
+
+@font-face {
+  font-family: 'IcoMoon-Free';
+  src:url('../assets/fonts/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-twitter, .icon-github, .icon-dribbble, .icon-instagram {
+  font-family: 'IcoMoon-Free';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+.icon-twitter:before {
+    content: "\ea96";
+}
