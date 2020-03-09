@@ -228,6 +228,7 @@ You can follow me on Twitter: [@xdavidhu](https://twitter.com/xdavidhu){:target=
 
 ### Timline:
 [Jan 04, 2020] - Bug reported<br>
+[Jan 06, 2020] - Initial triage<br>
 [Jan 06, 2020] - Bug accepted (P4 -> P1)<br>
 [Jan 17, 2020] - Reward of $6000 issued<br>
 [Mar 06, 2020] - Bug fixed
