@@ -1,10 +1,11 @@
 ---
 layout: post
 title:  "The unexpected Google wide domain check bypass"
-date:   2020-03-08 00:00:00 +0100
+date:   2020-03-08 12:00:00 +0100
 categories: google
 priority: P1
 priority-tag: <span class="priority" style="border-color:#FF0000">P1</span>
+twitter-image: /assets/posts/2020-03-08-the-unexpected-google-wide-domain-check-bypass/twitter-card.png
 ---
 
 Hi! Welcome to my first ever writeup! Let me tell you this "funny" story of me trying to
