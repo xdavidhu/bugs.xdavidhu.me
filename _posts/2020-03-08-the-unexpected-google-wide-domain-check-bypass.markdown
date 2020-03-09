@@ -226,7 +226,7 @@ So this was the story if me trying to bypass a small app's URL validation and ac
 
 You can follow me on Twitter: [@xdavidhu](https://twitter.com/xdavidhu){:target="_blank"}
 
-### Timline:
+### Timeline:
 [Jan 04, 2020] - Bug reported<br>
 [Jan 06, 2020] - Initial triage<br>
 [Jan 06, 2020] - Bug accepted (P4 -> P1)<br>
