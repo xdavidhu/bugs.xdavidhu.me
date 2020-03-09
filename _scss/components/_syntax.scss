@@ -13,12 +13,31 @@
     padding: $spacing-s $spacing-s;
     overflow: visible;
   }
+
+  code {
+    font-family: 'Courier', monospace;
+    font-size: 100%;
+    line-height: 1.5;
+  }
+
+}
+
+code:not([class]) {
+  font-family: 'Courier', monospace;
+  font-size: 100%;
+  line-height: 1.5;
+  background: #333;
+  border-radius: 0px;
+  padding: 0px;
 }
 
 code {
   font-family: 'Courier', monospace;
   font-size: 100%;
   line-height: 1.5;
+  background: #333;
+  border-radius: 6px;
+  padding: 3px;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
@@ -63,7 +82,7 @@ code {
 .highlight .nf { color: #268BD2 } /* Name.Function */
 .highlight .nl { color: #93A1A1 } /* Name.Label */
 .highlight .nn { color: #93A1A1 } /* Name.Namespace */
-.highlight .nx { color: #555 } /* Name.Other */
+.highlight .nx { color: #fff } /* Name.Other */
 .highlight .py { color: #93A1A1 } /* Name.Property */
 .highlight .nt { color: #268BD2 } /* Name.Tag */
 .highlight .nv { color: #268BD2 } /* Name.Variable */

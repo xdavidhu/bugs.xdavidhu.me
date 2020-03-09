@@ -12,7 +12,12 @@ title: Homepage
           <article class="inner">
             <time datetime="{{ post.date | date_to_xmlschema }}"
                 itemprop="datePublished">
-              <span class="priority">{{ post.priority }}</span> - {{ post.date | date_to_string }}
+              {% if post.priority-tag %}
+                {{ post.priority-tag }}
+              {% else %}
+                <span class="priority">{{ post.priority }}</span>
+              {% endif %}
+              - {{ post.date | date_to_string }}
             </time>
             <p itemprop="name headline">{{ post.title }}</p>
           </article>
