@@ -66,6 +66,9 @@
     margin: $spacing-m 0;
     li {
       margin-bottom: $spacing-xs;
+      list-style-type: disc;
+      margin-left: 1em;
+      line-height: 1.6;
     }
   }
 

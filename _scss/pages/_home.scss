@@ -60,15 +60,19 @@
       border: 2px solid $border-color;
       border-radius: 6px;
       padding: 5px;
+      padding-left: 7px;
       @media (max-width: 942px) {
         border: 1px solid $border-color;
         border-radius: 6px;
         padding: 3px;
+        padding-left: 5px;
+        padding-bottom: 5px;
       }
       @media (max-width: 642px) {
         border: 1px solid $border-color;
         border-radius: 6px;
         padding: 3px;
+        padding-left: 5px;
       }
     }
 

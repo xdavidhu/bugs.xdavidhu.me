@@ -33,3 +33,5 @@ paginate_path: "/page/:num"
 sass:
   sass_dir: _scss
   style: :compressed
+
+future: true
