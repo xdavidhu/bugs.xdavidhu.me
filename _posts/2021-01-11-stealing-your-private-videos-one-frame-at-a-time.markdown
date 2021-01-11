@@ -10,17 +10,17 @@ twitter-image: /assets/posts/2021-01-11-stealing-your-private-videos-one-frame-a
 
 Back in December 2019, a few months after I started hacking on Google VRP, I was looking at YouTube. I wanted to find a way to get access to a `Private` video which I did not own.
 
-When you upload a video to YouTube, you can select between 3 privacy settings. `Public`, which means that anyone can find and watch your video, `Unlisted`, which only allows users who know the video ID (the URL) to watch the video, and `Private`, where only you can watch the video, or other accounts you explicitly given permission to do so.
+When you upload a video to YouTube, you can select between 3 privacy settings. `Public`, which means that anyone can find and watch your video, `Unlisted`, which only allows users who know the video ID (the URL) to watch the video, and `Private`, where only you can watch the video, or other accounts you've explicitly given permission to do so.
 
 First thing I did was to upload a video to my second testing account’s YouTube channel, and set the video’s privacy to `Private`, so I can use that video for testing. *(Remember, always only test against resources/accounts you own!)* If I can find a way to access that video with my first testing account, we have a bug.
 
-With my first account, I started using YouTube, trying every feature, pressing every button I could find, and whenever I saw an HTTP request with a video ID in it, I changed it to the target `Private` video, hoping that I can leak some information about it, but I wasn’t really getting any success. The main YouTube site (at least the endpoints I have tested), seem to always check if the video was `Private` or not, and when trying to request info about the target `Private` video, they always returned errors such as `This video is private!`.
+With my first account, I started using YouTube, trying every feature, pressing every button I could find, and whenever I saw an HTTP request with a video ID in it, I changed it to the target `Private` video, hoping that I can leak some information about it, but I wasn’t really getting any success. The main YouTube site (at least the endpoints I have tested), seems to always check if the video was `Private` or not, and when trying to request info about the target `Private` video, they always returned errors such as `This video is private!`.
 
-I needed to find an other way.
+I needed to find another way.
 
-A great thing to do in a situation like this, is to try to look for other products/services which are not your main target, but are somehow interacting with it’s resources internally. If they have access to it’s resources, it might be possible that they don’t have every level of protection that the main product has.
+A great thing to do in a situation like this, is to try to look for other products/services which are not your main target, but are somehow interacting with its resources internally. If they have access to its resources, it might be possible that they don’t have every level of protection that the main product has.
 
-An interesting target which matched these requirements were Google Ads. This is the product which advertisers use to created ads across all Google services, *including YouTube*. So, the ads you get before YouTube videos are set up by advertisers here, on the Google Ads platform.
+An interesting target which matched these requirements was Google Ads. This is the product which advertisers use to create ads across all Google services, *including YouTube*. So, the ads you get before YouTube videos are set up by advertisers here, on the Google Ads platform.
 
 So I created a Google Ads account, and created a new advertisement, which would play a video of mine as a skippable ad for YouTube users. During the ad creation process, I also tried to use the target `Private` video’s ID wherever I cloud, but no success.
 
@@ -30,7 +30,7 @@ There was a page called `Videos`, where I could see a list of videos used by my 
 
 ![The Moments feature on the Ads console](/assets/posts/2021-01-11-stealing-your-private-videos-one-frame-at-a-time/ads-moments.gif)
 
-Looking at the proxy logs, everytime I “marked a moment”, a `POST` request was made to a `/GetThumbnails` endpoint, with a body which included a video ID:
+Looking at the proxy logs, every time I “marked a moment”, a `POST` request was made to a `/GetThumbnails` endpoint, with a body which included a video ID:
 
 ```http
 POST /aw_video/_/rpc/VideoMomentService/GetThumbnails HTTP/1.1
