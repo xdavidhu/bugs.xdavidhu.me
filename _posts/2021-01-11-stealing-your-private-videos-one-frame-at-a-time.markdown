@@ -22,7 +22,7 @@ A great thing to do in a situation like this, is to try to look for other produc
 
 An interesting target which matched these requirements was Google Ads. This is the product which advertisers use to create ads across all Google services, *including YouTube*. So, the ads you get before YouTube videos are set up by advertisers here, on the Google Ads platform.
 
-So I created a Google Ads account, and created a new advertisement, which would play a video of mine as a skippable ad for YouTube users. During the ad creation process, I also tried to use the target `Private` video’s ID wherever I cloud, but no success.
+So I created a Google Ads account, and created a new advertisement, which would play a video of mine as a skippable ad for YouTube users. During the ad creation process, I also tried to use the target `Private` video’s ID wherever I could, but no success.
 
 After creating the ad, I started looking at all of the different Google Ads features. The thing was huge, it had a bunch of different settings/tools. I was trying to find anything that could be YouTube-related.
 
