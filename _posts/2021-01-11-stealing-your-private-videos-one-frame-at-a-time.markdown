@@ -43,7 +43,7 @@ __ar={"1":"kCTeqs1F4ME","2":"12240","3":"387719230"}
 
 Where in the `__ar` parameter, `1` was the ID of the video and `2` was the time of the moment in milliseconds. The response was a base64 encoded image, which was the thumbnail displayed by Ads.
 
-I did what I did a bunch of times already, and replaced the ID to my second account’s `Private` video into the request, and to my surprise, **it returned a base64 response**!
+I did what I did a bunch of times already, and replaced the ID to my second account’s `Private` video in the request, and to my surprise, **it returned a base64 response**!
 
 I quickly Googled “base64 to image”, and pasted the base64 into the first decoder I found, and it **displayed a thumbnail from the target `Private` video**! It worked! I have found a working IDOR *(Insecure Direct Object Reference)* bug, where I could get a frame from any private video on YouTube!
 
@@ -51,7 +51,7 @@ But I was like “hm, that is just one frame”. We can do better.
 
 I wanted to make a proof of concept Python script which generates an actual, moving “video”. I searched for some calculations, and figured out that if the video is in 24 FPS, one frame stays on the screen for `33` milliseconds. So I just have to download every image starting from `0` milliseconds, incrementing by `33` milliseconds every time, and then construct some kind of video using all of the images I have acquired.
 
-I wrote a quick and dirty POC which downloaded the frames for the first 3 seconds of a video, decoded them, and then generated a GIF. To test it, I have ran it against an old video of mine, which I had previously privated due to the *high level of cringe*:
+I wrote a quick and dirty POC which downloaded the frames for the first 3 seconds of a video, decoded them, and then generated a GIF. To test it, I have ran it against an old video of mine, which I had previously privated due to, of course, the *high level of cringe*:
 
 <iframe width="100%" height="315px" src="https://www.youtube.com/embed/G3bNbYRTxZM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -64,13 +64,13 @@ And there you have it, using this bug, any private YouTube video could have been
 
 The takeaway from this bug is that situations where two different products interact with each other under the hood are always a good area to focus on, since both product teams probably only know their own systems best, and might miss important details when working with a different product's resources.
 
-Looking for an IDOR like this can be a very repetitive and manual task, and nowadays I try to avoid just blindly changing IDs everywhere and hoping for the best. After you test a product for a while and get a feel of how it works internally, it might be more effective (and more fun) to try to think about different unexpected actions that the developers maybe didn't expect based on what you saw already, or focus on features that just got released, or to just do any other non-mindless task. You will probably enjoy it more in the long term. In my opinion, the more you understand a system, the more ideas about how to break it will just naturally come to mind.
+Looking for an IDOR like this can be a very repetitive and manual task, and nowadays I try to avoid just blindly changing IDs everywhere and hoping for the best. After you test a product for a while and get a feel of how it works internally, it might be more effective (and more fun) to try to think about different unexpected actions that the developers maybe didn't think about based on what you saw already, or focus on features that just got released, or to just do any other non-mindless task. You will probably enjoy it more in the long term. In my opinion, the more you understand a system, the more ideas about how to break it will just naturally come to mind.
 
 But again, even in the most robust and well tested systems, there is the chance that just swapping an ID in a request will get you a critical bug.
 
 **Bonus QnA:**
 
-After I gave Google a heads-up about my disclosure timeline, I had a chance to ask the product team at Google some questions about this issue:
+After I gave Google a heads-up about my disclosure timeline, I had the chance to ask the product team at Google some questions about this issue:
 
 Q: Why did this work in the first place? Was the Ads backend just querying the video from some low level storage system, completely bypassing all YT's protections?
 
@@ -84,8 +84,8 @@ Thank you for reading! See you [next Monday](https://twitter.com/xdavidhu){:targ
 
 ### Timeline:
 [Dec 11, 2019] - Bug reported \
-[Dec 12, 2020] - Initial triage \
-[Dec 20, 2020] - Bug accepted (P4 -> P1) \
+[Dec 12, 2019] - Initial triage \
+[Dec 20, 2019] - Bug accepted (P4 -> P1) \
 [Jan 08, 2020] - Bug mitigated by temporarily disabling the `Moments` feature \
 [Jan 17, 2020] - Reward of [$5000](https://www.google.com/about/appsecurity/reward-program/){:target="_blank"} issued \
 [??? ??, 2020] - `Moments` re-enabled, now it checks if you have access to the video
