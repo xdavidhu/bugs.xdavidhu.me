@@ -68,7 +68,19 @@ Looking for an IDOR like this can be a very repetitive and manual task, and nowa
 
 But again, even in the most robust and well tested systems, there is the chance that just swapping an ID in a request will get you a critical bug.
 
-See you [next Monday](https://twitter.com/xdavidhu){:target="_blank"} ;)
+**Bonus QnA:**
+
+After I gave Google a heads-up about my disclosure timeline, I had a chance to ask the product team at Google some questions about this issue:
+
+Q: Why did this work in the first place? Was the Ads backend just querying the video from some low level storage system, completely bypassing all YT's protections?
+
+A: [waiting on the product team's reply, please check back a little bit later]
+
+Q: Now it seems to check if I have access to the video, based on my session. How is that implemented?
+
+A: [waiting on the product team's reply, please check back a little bit later]
+
+Thank you for reading! See you [next Monday](https://twitter.com/xdavidhu){:target="_blank"} ;)
 
 ### Timeline:
 [Dec 11, 2019] - Bug reported \
