@@ -1,5 +1,6 @@
 # Title of your blog; shows in the header
 name: "bugs.xdavidhu.me"
+title: "bugs.xdavidhu.me"
 
 # Description of your content (will only be used on Google Search)
 description: "xdavidhu's bug bounty writeups."
@@ -24,6 +25,7 @@ markdown: kramdown
 permalink: pretty
 plugins:
   - jekyll-paginate
+  - jekyll-feed
 
 paginate: 10
 paginate_path: "/page/:num"
