@@ -13,6 +13,7 @@
       <link href="//fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700|Lora:400,700,400italic|Anonymous+Pro" rel="stylesheet" type="text/css">
       <link rel="stylesheet" type="text/css" href="{{ site.baseurl| split: '/' | join:'/' }}/css/main.css" />
       <link rel="alternate" type="application/atom+xml" title="bugs.xdavidhu.me" href="/feed.xml">
+      <base target="_blank">
       {% if page.twitter-image %}
       <meta name="twitter:card" content="summary_large_image">
       <meta name="twitter:site" content="@xdavidhu" />
@@ -33,7 +34,7 @@
 
       <header>
         <div class="h-wrap">
-          <h1 class="title"><a href="{{ site.baseurl | split:'/' | join:'/' | append:'/'  }}" title="Back to Homepage">{{ site.name }}</a></h1>
+          <h1 class="title"><a href="{{ site.baseurl | split:'/' | join:'/' | append:'/'  }}" title="Back to Homepage" target="_self">{{ site.name }}</a></h1>
           <div class="menu-icon"><a class="back" title="back to xdavidhu.me" href="https://xdavidhu.me"></a></div>
         </div>
       </header>

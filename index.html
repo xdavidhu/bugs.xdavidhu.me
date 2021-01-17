@@ -7,7 +7,7 @@ title: Homepage
   <ul class="posts">
     {% for post in paginator.posts %}
     <li itemscope itemtype="http://schema.org/BlogPosting">
-      <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">
+      <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url" target="_self">
         <div class="p-wrap">
           <article class="inner">
             <time datetime="{{ post.date | date_to_xmlschema }}"
@@ -35,15 +35,15 @@ title: Homepage
 {% if paginator.total_pages > 1 %}
 <div class="pagination">
   {% if paginator.next_page %}
-  <a href="{{ site.baseurl }}/page/{{paginator.next_page}}" class="older">Older</a>
+  <a href="{{ site.baseurl }}/page/{{paginator.next_page}}" class="older" target="_self">Older</a>
   {% else %}
   <span class="next">Older</span>
   {% endif %}
   {% if paginator.previous_page %}
     {% if paginator.page == 2 %}
-    <a href="{{ site.baseurl }}/" class="newer">Newer</a>
+    <a href="{{ site.baseurl }}/" class="newer" target="_self">Newer</a>
     {% else %}
-    <a href="{{ site.baseurl }}/page/{{paginator.previous_page}}" class="newer">Newer</a>
+    <a href="{{ site.baseurl }}/page/{{paginator.previous_page}}" class="newer" target="_self">Newer</a>
     {% endif %}
   {% else %}
   <span class="previous">Newer</span>
