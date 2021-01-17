@@ -5,4 +5,7 @@ footer {
   left: 0;
   text-align: center;
   small { text-transform: uppercase; }
+  @media (max-width: 642px) {
+    padding: 1em;
+  }
 }
