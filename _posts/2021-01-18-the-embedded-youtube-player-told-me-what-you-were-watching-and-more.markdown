@@ -80,7 +80,11 @@ As an attacker, we can clearly see that these playlists can contain very sensiti
 
 #### Chapter 2: <br/>The Embedded Player and it’s API {#chapter2}
 
-If you have a website and want to have a little YouTube player inside it, there is an app for that. And it’s called the [YouTube IFrame Player](https://developers.google.com/youtube/iframe_api_reference). Embedding this player into your website is quite easy, you just have to copy some HTML code with an `iframe` tag, and paste it into your site’s source. But today websites are rarely that simple, so you might wonder, what if I want to dynamically create a YouTube player with JavaScript? What if I want to automatically pause the video? These problems would seem quite hacky, or even impossible in some cases, due to the rules of the [Same-origin Policy](https://en.wikipedia.org/wiki/Same-origin_policy), and other protections modern browsers provide.
+If you have a website and want to have a little YouTube player inside it, there is an app for that. And it’s called the [YouTube IFrame Player](https://developers.google.com/youtube/iframe_api_reference). Embedding this player into your website is quite easy, you just have to copy some HTML code with an `iframe` tag, and paste it into your site’s source:
+
+![Screenshot of an empty webpage with an embedded YouTube player](/assets/posts/2021-01-18-the-embedded-youtube-player-told-me-what-you-were-watching-and-more/embedded-player.png)
+
+ But today websites are rarely that simple, so you might wonder, what if I want to dynamically create a YouTube player with JavaScript? What if I want to automatically pause the video? These problems would seem quite hacky, or even impossible in some cases, due to the rules of the [Same-origin Policy](https://en.wikipedia.org/wiki/Same-origin_policy), and other protections modern browsers provide.
 
 Thankfully, YouTube has a solution for this as well, the [YouTube Player API](https://developers.google.com/youtube/iframe_api_reference). This API allows you to just add a JS library to your site, and then simply create/modify/control the YouTube players on your site however you'd like, using JavaScript. For example, if you want to pause a video, you can just call `player.pauseVideo()`.
 
