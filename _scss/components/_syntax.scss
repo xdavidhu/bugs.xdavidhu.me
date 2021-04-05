@@ -11,7 +11,10 @@
 
   pre {
     padding: $spacing-s $spacing-s;
-    overflow: visible;
+    // Remove this, so the padding gets added to the end of the code block.
+    // I hope nothing else breaks because of this.
+    // Wow. Works better then expected. Rounds the corners of the scrollbar as well.
+    // overflow: visible;
   }
 
   code {

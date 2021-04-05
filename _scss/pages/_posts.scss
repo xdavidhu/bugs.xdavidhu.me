@@ -63,13 +63,21 @@
     margin: 0 0 $spacing-m;
   }
 
-  ul,
-  ol {
+  ul {
     margin: $spacing-m 0;
     li {
       margin-bottom: $spacing-xs;
       list-style-type: disc;
       margin-left: 1em;
+      line-height: 1.6;
+    }
+  }
+
+  ol {
+    margin: $spacing-m 0;
+    li {
+      margin-bottom: $spacing-xs;
+      margin-left: 3em;
       line-height: 1.6;
     }
   }
@@ -162,4 +170,20 @@
 #prev:hover .nav-title,
 #next:hover .nav-title {
   display: inline;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #333; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(85, 85, 85, 0.5); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

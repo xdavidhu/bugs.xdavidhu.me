@@ -4,7 +4,6 @@ title:  "Stealing Your Private YouTube Videos, One Frame at a Time"
 post-title:  "Stealing Your Private YouTube Videos, One Frame at a Time"
 date:   2021-01-11 12:00:00 +0100
 categories: google
-priority: P1
 priority-tag: <span class="priority" style="border-color:#FF0000">youtube</span>
 twitter-image: /assets/posts/2021-01-11-stealing-your-private-videos-one-frame-at-a-time/twitter-card.png
 ---

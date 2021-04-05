@@ -4,7 +4,6 @@ title:  "The Embedded YouTube Player Told Me What You Were Watching (and more)"
 post-title:  "The Embedded YouTube Player Told Me What You Were Watching<br/>(and more)"
 date:   2021-01-18 12:00:00 +0100
 categories: google
-priority: P1
 priority-tag: <span class="priority" style="border-color:#FF0000">youtube</span>
 twitter-image: /assets/posts/2021-01-18-the-embedded-youtube-player-told-me-what-you-were-watching-and-more/twitter-card.png
 ---
