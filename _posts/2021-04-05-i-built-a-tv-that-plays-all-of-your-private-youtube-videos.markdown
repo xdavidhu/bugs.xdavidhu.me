@@ -207,7 +207,7 @@ YouTube fixed this issue in a quite simple, but effective way. They removed the 
 No, actually, what they did is that this `/bind` endpoint now requires an `Authorization` header with an OAuth `Bearer` token to be authenticated, so the mobile apps and such can still use it without issues. But when requested with cookies only (like in our CSRF attack), it behaves like an anonymous request, without any authentication. Thus, it’s not possible to play videos/playlists in the name of a victim anymore.
 
 *Hey, you read the whole thing!* \
-I made an experimental Google From to get a little feedback about you & your experience reading this writeup. If you'd like, you can fill it out [here](https://forms.gle/XBatcUnQNTDCSXAU7).
+I made an experimental Google Form to get a little feedback about you & your experience reading this writeup. If you'd like, you can fill it out [here](https://forms.gle/XBatcUnQNTDCSXAU7).
 
 ### Timeline:
 [Jul 24, 2020] - Bug reported \
