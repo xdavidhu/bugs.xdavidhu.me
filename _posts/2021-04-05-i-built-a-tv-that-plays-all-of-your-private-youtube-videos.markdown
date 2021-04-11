@@ -10,7 +10,7 @@ twitter-image: /assets/posts/2021-04-05-i-built-a-tv-that-plays-all-of-your-priv
 
 In my [previous](/google/2021/01/11/stealing-your-private-videos-one-frame-at-a-time/) [two](/google/2021/01/18/the-embedded-youtube-player-told-me-what-you-were-watching-and-more/) YouTube writeups, we were limited by having to know the victim's private video IDs to do anything with them. Let’s be honest, that’s a bit hard to exploit in the real world. Thankfully, I found another bug that solves this problem once and for all. Allow me to present a real, one-click steal-all bug to you. This one *actually* kicks-ass. At least I like to think that.
 
-Prefer to read the raw technical report I've sent to Google instead of the story? [You can find it here!](https://gist.github.com/xdavidhu/5329a4a30a5115c5c2bde218034edcdc)
+Prefer to read the raw technical report I've sent to Google instead of the story? [You can find it here!](https://feed.bugs.xdavidhu.me/bugs/0001)
 
 It all started years ago. We were at a friend’s place and were flying tiny little FPV drones. After draining all of the miniature drone batteries, I wanted to show them an old personal video from my YouTube account. They had a Smart TV. I opened the YouTube app on my phone, selected my private video, and it gave me the option to play it on the TV. I thought why not, let’s do that, so we watched my private video on the TV without problems. But this planted an idea in my head that stayed there for years. My question was very simple:
 
