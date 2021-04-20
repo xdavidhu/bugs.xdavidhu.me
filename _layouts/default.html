@@ -32,7 +32,7 @@
 
     <div class="site-wrapper">
 
-      <header>
+      <header {% if page.url == "/" %}class="header-border"{% endif %}>
         <div class="h-wrap">
           <h1 class="title"><a href="{{ site.baseurl | split:'/' | join:'/' | append:'/'  }}" title="Back to Homepage" target="_self">{{ site.name }}</a></h1>
           <div class="menu-icon"><a class="back" title="back to xdavidhu.me" href="https://xdavidhu.me"></a></div>
