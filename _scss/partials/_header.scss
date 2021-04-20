@@ -20,8 +20,21 @@ header {
       }
     }
   } // end h1.title
-
 } // end .h-wrap
+
+.title-normal {
+  display: inline;
+  @media (max-width: 360px) {
+    display: none;
+  }
+}
+
+.title-small {
+  display: none;
+  @media (max-width: 360px) {
+    display: inline;
+  }
+}
 
 .menu-icon {
   @extend %padding-large;

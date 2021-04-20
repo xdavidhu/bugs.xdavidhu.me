@@ -111,10 +111,20 @@
 } // end .pagination
 
 .feed-msg {
-    text-align: center;
-    padding: 1em 0em;
+  text-align: center;
+  padding: 1em 0em;
+  @media (max-width: 642px) {
+    font-size: 80%;
+  }
+}
+
+.feed-msg-br {
+  display: none;
+  @media (max-width: 642px) {
+    display: block;
+  }
 }
 
 .header-border {
-    border-bottom: 1px solid #634ceb;
+  border-bottom: 1px solid #634ceb;
 }
