@@ -54,12 +54,12 @@ To link a TV, you would have to enter its TV code. So on my “TV”, I generate
 And entered that TV code in my other browser, on `https://youtube.com/pair`:
 
 ![The old, now removed pairing page on the desktop YouTube site](/assets/posts/2021-04-05-i-built-a-tv-that-plays-all-of-your-private-youtube-videos/ytdesktop-old-pairing.jpeg)
-*src: [wikiHow](https://www.wikihow.com/Watch-YouTube-on-Roku)*
+<em style="display: block; text-align: center; font-style: italic">src: [wikiHow](https://www.wikihow.com/Watch-YouTube-on-Roku)</em>
 
 After linking a TV, if you opened a video, a little `Play on TV` icon appeared on the right side of the player, which if pressed, transferred the video onto the TV:
 
 ![The old, "Play on TV" button on the desktop YouTube site](/assets/posts/2021-04-05-i-built-a-tv-that-plays-all-of-your-private-youtube-videos/play-on-tv-button.jpg)
-*src: [www.technipages.com](https://www.technipages.com/how-to-connect-chromebook-to-tv)*
+<em style="display: block; text-align: center; font-style: italic">src: [www.technipages.com](https://www.technipages.com/how-to-connect-chromebook-to-tv)</em>
 
 And guess what, it even worked with private videos! I finally had all the tools to get to the bottom of this.
 
@@ -181,7 +181,7 @@ That's it! We have stolen **all `Unlisted` and all `Private` videos of the victi
 
 This bug was a bit complicated to exploit, so I made an [*extremely overengineered* POC script](https://gist.github.com/xdavidhu/b264ee21d8586e580adc7f821ddfbfc9), which performs this attack automatically. This is how it looked like in action, stealing all `Private` & `Unlisted` videos of a victim:
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/HmdyzRH67ac" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/HmdyzRH67ac" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 The POC had two components, a `backend` webserver which also acted as the evil TV, and a `frontend` which was running in the victim’s browser, talking with the `backend`. It's perfectly fine if you don't exactly understand how the script worked under the hood, I might have made a little bit of a mess (but you are welcome to look at all of the source code if you are interested!). Here is a more (or less) fun, higher-level description of the POC flow (that I have sent to Google):
 

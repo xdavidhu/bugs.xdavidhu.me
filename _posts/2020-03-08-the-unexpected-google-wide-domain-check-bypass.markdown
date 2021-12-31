@@ -188,7 +188,7 @@ window.addEventListener('message', function (d) {
 
 Here is the POC video I sent to Google which shows this in action:
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/F4DhJDV5sDs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/F4DhJDV5sDs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 At this point, I had mixed feeling about this, since this had quite a low impact. You could only "steal" API keys or OAuth Client ID's. Cliend ID's without the secrets are *meh*, and if you wanted to generate an API key for an API that was paid (with required billing), it required user interaction. So essentially this was a pretty low/medium impact bug.
 

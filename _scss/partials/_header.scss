@@ -65,6 +65,7 @@ header {
     }
   }
   .back:after {
+    vertical-align: -10%;
     content: 'back to xdavidhu.me';
   }
   @media (max-width: 642px) {

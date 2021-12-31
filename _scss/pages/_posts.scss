@@ -1,6 +1,6 @@
 .single-wrap {
   width: 100%;
-  max-width: 740px;
+  max-width: 950px;
   margin: $spacing-s auto;
   font-family: $variant-family;
   background: #222;
@@ -107,6 +107,35 @@
   img {
     width: 100%;
     height: 100%;
+    border-radius: 6px;
+  }
+
+  iframe {
+    height: 350px;
+    width: 100%;
+  }
+
+  a {
+    img {
+      transition: all .2s ease-in-out;
+    }
+    img:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  @media (min-width: 942px) {
+    img {
+      width: 80%;
+      display: block;
+      margin: auto;
+    }
+
+    iframe {
+      width: 80%;
+      display: block;
+      margin: auto;
+    }
   }
 
 

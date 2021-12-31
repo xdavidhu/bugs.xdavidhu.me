@@ -53,7 +53,7 @@ I wanted to make a proof of concept Python script which generates an actual, mov
 
 I wrote a quick and dirty POC which downloaded the frames for the first 3 seconds of a video, decoded them, and then generated a GIF. To test it, I have ran it against an old video of mine, which I had previously privated due to, of course, the *high level of cringe*:
 
-<iframe width="100%" height="315px" src="https://www.youtube.com/embed/G3bNbYRTxZM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/G3bNbYRTxZM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 And there you have it, using this bug, any private YouTube video could have been downloaded by a malicious attacker, which to me feels like a pretty cool impact. But of course, it had a few limitations I couldn’t overcome:
 
