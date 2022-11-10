@@ -81,7 +81,7 @@ Two weeks after our call, I got a new message that confirmed the original info I
 
 You can read the full conversation on [feed.bugs.xdavidhu.me](https://feed.bugs.xdavidhu.me/bugs/0016).
 
-All in all, even though this bug started out as a not-too-great experience for me, the hacker, after I started "screaming" loudly enough, they noticed, and really wanted correct what went wrong. Hopefully they treated the original reporter(s) fairly as well. In the end, I think Google did pretty well, althugh the fix timelime still felt long for me.
+All in all, even though this bug started out as a not-too-great experience for me, the hacker, after I started "screaming" loudly enough, they noticed, and really wanted correct what went wrong. Hopefully they treated the original reporter(s) fairly as well. In the end, I think Google did pretty well, although the fix timelime still felt long for me.
 
 But I'll let you be the judge of it.
 
