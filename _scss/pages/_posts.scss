@@ -111,7 +111,7 @@
   }
 
   iframe {
-    height: 350px;
+    aspect-ratio: 16/9;
     width: 100%;
   }
 
@@ -215,4 +215,10 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
+}
+
+.desktop-br {
+  @media (max-width: 642px) {
+    display: none;
+  }
 }
