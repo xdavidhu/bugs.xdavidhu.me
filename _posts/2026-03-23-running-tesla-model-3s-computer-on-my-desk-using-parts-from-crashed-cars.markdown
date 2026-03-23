@@ -8,7 +8,7 @@ priority-tag: <span class="priority" style="border-color:#CC0000">tesla</span>
 twitter-image: "/assets/posts/2026-03-23-running-tesla-model-3s-computer-on-my-desk-using-parts-from-crashed-cars/card.jpg"
 ---
 
-Tesla runs a bug bounty program that invites researchers to find security vulnerabilities in their vehicles. To participate, I needed the actual hardware, so I started looking for Tesla Model 3 parts on eBay. My goal was to get a Tesla car computer and touchscreen running on my desk, booting the car's operating system.
+Tesla runs a [bug bounty program](https://bugcrowd.com/engagements/tesla) that invites researchers to find security vulnerabilities in their vehicles. To participate, I needed the actual hardware, so I started looking for Tesla Model 3 parts on eBay. My goal was to get a Tesla car computer and touchscreen running on my desk, booting the car's operating system.
 
 The car computer consists of two parts - the MCU (Media Control Unit) and the autopilot computer (AP) layered on top of each other. In the car, the computer is located in front of the passenger seat, roughly behind the glovebox. The part itself is the size of an iPad and the thickness of a ~500 page book and is covered in a water-cooled metal casing:
 
