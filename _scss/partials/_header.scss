@@ -5,12 +5,15 @@ header {
 
 .h-wrap {
   @extend %padding-large;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   h1.title {
     @extend h3;
-    display: inline-block;
     margin: 0;
     padding: 0;
+    line-height: 1;
     font-weight: normal;
     a {
       color: $text-color;
@@ -37,17 +40,6 @@ header {
 }
 
 .menu-icon {
-  @extend %padding-large;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding-top: 45px;
-  @media (max-width: 942px) {
-      padding-top: 40px;
-  }
-  @media (max-width: 642px) {
-    padding-top: 32px;
-  }
   a {
     color: $text-color;
     text-decoration: none;
@@ -56,16 +48,17 @@ header {
     }
   }
   .back {
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1;
     border: 2px solid $border-color;
     border-radius: 6px;
-    padding: 10px;
+    padding: 10px 10px 8px;
     &:hover {
       border: 2px solid $link-color;
     }
   }
   .back:after {
-    vertical-align: -10%;
     content: 'back to xdavidhu.me';
   }
   @media (max-width: 642px) {
@@ -86,9 +79,6 @@ header {
   right: 0;
   width: 100%;
   &.open {
-    .menu-icon {
-      position: fixed;
-    }
   }
 }
 

@@ -1,0 +1,16 @@
+{% assign gallery_images = include.images | split: "," %}
+<div class="gallery" {% if include.alt %}aria-label="{{ include.alt }}" role="region"{% endif %}>
+  <div class="gallery-track">
+    {% for image in gallery_images %}
+    <div class="gallery-slide">
+      <img src="{{ site.baseurl }}/assets/posts/{{ include.post }}/{{ image | strip }}" loading="lazy" alt="">
+    </div>
+    {% endfor %}
+  </div>
+  <button class="gallery-btn gallery-prev" aria-label="Previous image">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+  </button>
+  <button class="gallery-btn gallery-next" aria-label="Next image">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+  </button>
+</div>

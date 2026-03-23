@@ -17,7 +17,7 @@ $font-family:       'Overpass Mono', monospace;
 $variant-family:    'Exo', sans-serif;
 $font-size-l:       1.15em; // font-size on desktop type screens
 $font-size-m:       $font-size-l * 0.9; // font-size under 942px wide screens
-$font-size-s:       $font-size-l * 0.7; // font-size under 642px wide screens
+$font-size-s:       $font-size-l * 0.8; // font-size under 642px wide screens
 
 
 // Spacings
@@ -25,7 +25,7 @@ $font-size-s:       $font-size-l * 0.7; // font-size under 642px wide screens
 $spacing-xs:        .5em;
 $spacing-s:         $spacing-xs * 2;
 $spacing-sm:        $spacing-s + $spacing-xs;
-$spacing-m:         $spacing-sm + $spacing-xs;
+$spacing-m:         1.5em;
 $spacing-ml:        $spacing-m + $spacing-xs;
 $spacing-l:         $spacing-ml + $spacing-s;
 $spacing-xl:        $spacing-l + $spacing-s;
