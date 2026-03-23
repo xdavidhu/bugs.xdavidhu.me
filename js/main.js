@@ -115,6 +115,7 @@ window.onload = function() {
         lightboxIndex = index || 0;
         lightboxImg.src = src;
         lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
         updateLightboxNav();
     }
 
@@ -124,6 +125,7 @@ window.onload = function() {
             lightbox.classList.remove('active', 'closing');
             lightboxImg.src = '';
             lightboxSrcs = [];
+            document.body.style.overflow = '';
             lightbox.removeEventListener('animationend', handler);
         });
     }
